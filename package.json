@@ -1,5 +1,5 @@
 {
-  "name": "PL_practica2",
+  "name": "DSI_practica8",
   "version": "1.0.0",
   "description": "Analizador de cadenas csv usando AJAX",
   "main": "csv.js",
@@ -8,18 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    "url": ""
   },
   "keywords": [
     "csv"
   ],
-  "author": XXXXXXXXXX
+  "author": "Noé Campos y Jacobo Rodicio",
   "contributors": [],
   "license": "ISC",
   "bugs": {
-    "url": XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    "url": ""
   },
-  "homepage": XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  "homepage": "",
   "dependencies": {
 	"jquery": "*",
     "underscore": "*",
@@ -29,7 +29,7 @@
     "express-ejs-layouts": "~1.1.0"
   },
   "engines": {
-    "node": XXXXX
+    "node": "0.12.7"
   },
   "devDependencies": {
   }
