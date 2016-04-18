@@ -47,8 +47,6 @@ const handleFileSelect = (evt) => {
 
 /* Drag and drop: el fichero arrastrado se vuelca en la textarea de entrada */
 const handleDragFileSelect = (evt) => {
-  evt.stopPropagation();
-  evt.preventDefault();
 
 /*  XXX XXXXX X XXXXXXXXXXXXXXXXXXXXXXX XX XXXXXXXX XXXXXXX
 
@@ -75,18 +73,18 @@ $(document).ready(() => {
     }
 
     /* Request AJAX para que se calcule la tabla */
-    /*XXXXXXXXXXXXXXXXXX XX XX X
-        XX XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXX X XXXXXXXXXXXXXXX
-        XXXXXXXXXXXXX
-          X XXXXXX XXXXXXXXXXXXXX XX
-          XXXXXXXXXX
-          XXXXXX
-        XX
-   XXX*/
+    $("#parse").click( () => {
+        if (window.localStorage) localStorage.original = original.value;
+        $.get("/csv", /* Request AJAX para que se calcule la tabla lo devuleve a app*/
+          { input: original.value },
+          fillTable,
+          'json'
+        );
+   });
    /* botones para rellenar el textarea */
-   /*XXXXXXXXXXXXXXXXXXXXXXXXX XXXXX XX X
-     XXXXXXXXXXX XX XX X XXXXXXXXXXXXXXXXXXXXXXXXXXX XXX
-   XXX*/
+   $('button.example').each( (_,y) => {
+     $(y).click( () => { dump(`${$(y).text()}.txt`); });
+   });
 
     // Setup the drag and drop listeners.
     //var dropZone = document.getElementsByClassName('drop_zone')[0];
