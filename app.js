@@ -13,14 +13,14 @@ app.use(expressLayouts);
 
 app.use(express.static(__dirname + '/public'));
 
-const calculate = require('XXXXXXXXXXXXXXXXXX');
+const calculate = require('./models/calculate');
 
-app.get('/', (request, response) => {     
-  XXXXXXXXXXXXXXXXXXXXXXXX X XXXXXX XXXX XXXXXXXXX XXX
+app.get('/', (request, response) => {
+  response.render('index',{title : 'Comma Separated Value Analyze myApp' })
 });
 
 app.get('/csv', (request, response) => {
-  XXXXXXXXXXXXXXX XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXX
+  //XXXXXXXXXXXXXXX XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXX
 });
 
 app.listen(app.get('port'), () => {
