@@ -2,6 +2,7 @@ body {
   font: Helvetica, sans-serif;
   background-color: #A4A4A4;
   width: 70%;
+  height: 90%;
   position: relative;
   margin: auto;
   background-color: #F7BE81; }
@@ -16,14 +17,26 @@ body {
     margin-top: 10px;
     background-color: #FE9A2E;
     font: #FF8000; }
+    body #contenido {
+      height: 60%;
+      position: relative;
+    }
   body footer #pie {
-    height: 50px;
-    width: 70%; }
+    margin-top: 33%;
+    margin-left: auto;
+    margin-right: auto;
+     -webkit-box-sizing:border-box;
+     -moz-box-sizing:border-box;
+     box-sizing:border-box;
+     background: #333;
+     width: 62.2%;
+     border-top: 2px solid #000;}
     body footer #pie a {
       font: #FF8000;
       margin: 3px auto;
       text-decoration: none;
       background: #000;
+      width: 70%;
       color: #FFF;
       border: 1px outset #CCC;
       padding: 0.1em 0.5em;
