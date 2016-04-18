@@ -1,0 +1,33 @@
+body {
+  font: Helvetica, sans-serif;
+  background-color: #A4A4A4;
+  width: 70%;
+  position: relative;
+  margin: auto;
+  background-color: #F7BE81; }
+  body h1 {
+    margin-top: 10px; }
+  body table tr {
+    font: Helvetica, sans-serif;
+    color: #FF8000; }
+    body table tr td {
+      font: #F7BE81; }
+  body button {
+    margin-top: 10px;
+    background-color: #FE9A2E;
+    font: #FF8000; }
+  body footer #pie {
+    height: 50px;
+    width: 70%; }
+    body footer #pie a {
+      font: #FF8000;
+      margin: 3px auto;
+      text-decoration: none;
+      background: #000;
+      color: #FFF;
+      border: 1px outset #CCC;
+      padding: 0.1em 0.5em;
+      hover-background: #CCB;
+      active-border: 1px inset #000; }
+
+/*# sourceMappingURL=generado.css.map */
