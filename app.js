@@ -1,6 +1,6 @@
 "use strict";
 
-const express = require('express');
+var express = require('express');
 const app = express();
 const path = require('path');
 const expressLayouts = require('express-ejs-layouts');
@@ -16,7 +16,7 @@ app.use(express.static(__dirname + '/public'));
 const calculate = require('./models/calculate');
 
 app.get('/', (request, response) => {
-  response.render('index',{title : 'Comma Separated Value Analyze myApp' })
+  response.render('index',{title : 'Comma Separated Value Analyze (CSV) myApp with Ajax' })
 });
 
 app.get('/csv', (request, response) => {

@@ -32,6 +32,7 @@ const calculate = (original) => {
         r.push({items: errmsg.split("").splice(commonLength), type: 'error'});
       }
     }
+    console.log("Devolviendo el valor de la cadena procesada calculate");
     return r;
   };
 
