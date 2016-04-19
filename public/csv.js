@@ -37,6 +37,7 @@ const handleFileSelect = (evt) => {
 
  var fichero=evt.target.files;
  console.log("mostramos lo contenido con target" + fichero);
+
  var lectura = new FileReader();
  console.log("READER" + lectura);
  lectura.onload = (e) => {
@@ -47,25 +48,25 @@ const handleFileSelect = (evt) => {
 
 /* Drag and drop: el fichero arrastrado se vuelca en la textarea de entrada */
 const handleDragFileSelect = (evt) => {
-
     evt.stopPropagation();
     evt.preventDefault();
 
-    var files = evt.dataTransfer.files; // FileList object.
+    var fichero = evt.dataTransfer.files; // FileList object.
 
-    var reader = new FileReader();
-    reader.onload = (e) => {
+    var lectura = new FileReader();
+
+    lectura.onload = (e) => {
 
       $("#original").val(e.target.result);
-      evt.target.style.background = "white";
+      evt.target.style.background = "grey";
     };
-    reader.readAsText(files[0])
+    reader.readAsText(fichero[0])
 }
 
 const handleDragOver = (evt) => {
   evt.stopPropagation();
   evt.preventDefault();
-  evt.target.style.background = "yellow";
+  evt.target.style.background = "green";
 }
 
 $(document).ready(() => {
