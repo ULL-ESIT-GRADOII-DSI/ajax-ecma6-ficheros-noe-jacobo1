@@ -48,15 +48,18 @@ const handleFileSelect = (evt) => {
 /* Drag and drop: el fichero arrastrado se vuelca en la textarea de entrada */
 const handleDragFileSelect = (evt) => {
 
-/*  XXX XXXXX X XXXXXXXXXXXXXXXXXXXXXXX XX XXXXXXXX XXXXXXX
+    evt.stopPropagation();
+    evt.preventDefault();
 
-  XXX XXXXXX X XXX XXXXXXXXXXXXX
-  XXXXXXXXXXXXX X XXX XX X
+    var files = evt.dataTransfer.files; // FileList object.
 
-    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-    XXXXXXXXXXXXXXXXXXXXXXXXXXX X XXXXXXXX
-  XX
-  XXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+    var reader = new FileReader();
+    reader.onload = (e) => {
+
+      $("#original").val(e.target.result);
+      evt.target.style.background = "white";
+    };
+    reader.readAsText(files[0])
 }
 
 const handleDragOver = (evt) => {
