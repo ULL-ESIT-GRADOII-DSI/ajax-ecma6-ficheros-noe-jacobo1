@@ -1,38 +1,39 @@
 body {
   font: Helvetica, sans-serif;
-  background-color: #A4A4A4;
+  /*background-color: #A4A4A4;*/
+  background-image: url("http://img.webme.com/pic/p/procssdesign/bg-1.jpg");
   width: 70%;
   height: 90%;
   position: relative;
-  margin: auto;
-  background-color: #F7BE81; }
+  margin-left: 18%;
+  }
   body h1 {
-    margin-top: 10px; }
+    margin-top: 10px;
+  }
+  
   body table tr {
     font: Helvetica, sans-serif;
-    color: #FF8000; }
+    color: #000;
+    background-color: #A9A9F5; }
     body table tr td {
-      font: #F7BE81; }
+    background-color: #A9A9F5;
+    font: #F7BE81; }
   body button {
     margin-top: 10px;
-    background-color: #FE9A2E;
-    font: #FF8000; }
-    body #contenido {
-      height: 60%;
-      position: relative;
-    }
-  body footer #pie {
-    margin-top: 33%;
+    background-color: #A9F5F2;
+    font: #FFF; }
+
+    footer #pie {
+    margin-top: 25%;
     margin-left: auto;
     margin-right: auto;
-     -webkit-box-sizing:border-box;
-     -moz-box-sizing:border-box;
-     box-sizing:border-box;
-     background: #333;
-     width: 62.2%;
-     border-top: 2px solid #000;}
-    body footer #pie a {
-      font: #FF8000;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    width: 70%;
+    border-top: 2px solid #000;}
+    footer #pie a {
+
       margin: 3px auto;
       text-decoration: none;
       background: #000;
