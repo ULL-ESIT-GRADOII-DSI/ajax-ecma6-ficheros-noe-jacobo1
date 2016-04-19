@@ -35,15 +35,15 @@ const handleFileSelect = (evt) => {
   evt.stopPropagation();//evita que los controladores de eventos de los padres sean ejecutados
   evt.preventDefault();//los link los deja inutilizables(la accion que pertenece al bojeto no ocurrira)
 
- var fichero=evt.target.files;
- console.log("mostramos lo contenido con target" + fichero);
+ var files=evt.target.files;
+ console.log("mostramos lo contenido con target" + files);
 
- var lectura = new FileReader();
- console.log("READER" + lectura);
- lectura.onload = (e) => {
+ var reader = new FileReader();
+ console.log("READER" + reader);
+ reader.onload = (e) => {
    $("#original").val(e.target.result);
  };
- lectura.readAsText(fichero[0])
+ reader.readAsText(files[0])
 }
 
 /* Drag and drop: el fichero arrastrado se vuelca en la textarea de entrada */
@@ -51,22 +51,22 @@ const handleDragFileSelect = (evt) => {
     evt.stopPropagation();
     evt.preventDefault();
 
-    var fichero = evt.dataTransfer.files; // FileList object.
+    var files = evt.dataTransfer.files; // FileList object.
 
-    var lectura = new FileReader();
+    var reader = new FileReader();
 
-    lectura.onload = (e) => {
+    reader.onload = (e) => {
 
       $("#original").val(e.target.result);
       evt.target.style.background = "grey";
     };
-    reader.readAsText(fichero[0])
+    reader.readAsText(files[0])
 }
 
 const handleDragOver = (evt) => {
   evt.stopPropagation();
   evt.preventDefault();
-  evt.target.style.background = "green";
+  evt.target.style.background = "light-grey";
 }
 
 $(document).ready(() => {

@@ -13,10 +13,12 @@ app.use(expressLayouts);
 
 app.use(express.static(__dirname + '/public'));
 
-const calculate = require('./models/calculate');
+//calculate o hace falta llamarlo con el .js
+const calculate = require('./models/calculate.js');
 
 app.get('/', (request, response) => {
-  response.render('index',{title : 'Comma Separated Value Analyze (CSV) myApp with Ajax' })
+  response.render('index',
+  {title : 'Comma Separated Value Analyze (CSV) myApp with Ajax', error:"" })
 });
 
 app.get('/csv', (request, response) => {
