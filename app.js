@@ -13,7 +13,7 @@ app.use(expressLayouts);
 
 app.use(express.static(__dirname + '/public'));
 
-//calculate o hace falta llamarlo con el .js
+//calculate o hace falta llamarlo con el .js .
 const calculate = require('./models/calculate.js');
 
 app.get('/', (request, response) => {
