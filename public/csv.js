@@ -19,6 +19,7 @@ const resultTemplate = `
 
 /* Volcar la tabla con el resultado en el HTML */
 const fillTable = (data) => {
+  console.log("dato d filltable"+ resultTemplate);
   $("#finaltable").html(_.template(resultTemplate, { rows: data.rows }));
 };
 
@@ -52,9 +53,7 @@ const handleDragFileSelect = (evt) => {
     evt.preventDefault();
 
     var files = evt.dataTransfer.files; // FileList object.
-
     var reader = new FileReader();
-
     reader.onload = (e) => {
 
       $("#original").val(e.target.result);
